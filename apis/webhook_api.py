@@ -4,7 +4,7 @@ Handles customer and subscription events from Shopify
 """
 from fastapi import APIRouter, Request, HTTPException, Header
 from beanie import PydanticObjectId
-from database import User, Subscription, SubscriptionStatus, SubscriptionProvider
+from models.database import User, Subscription, SubscriptionStatus, SubscriptionProvider
 from config import settings
 import hmac
 import hashlib

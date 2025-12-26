@@ -6,8 +6,8 @@ Supports both JWT authentication and Shopify authentication
 from fastapi import HTTPException, Request, Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from typing import Optional
-from database import User, Subscription, SubscriptionStatus
-from auth import verify_shopify_request, get_current_user_from_token
+from models.database import User, Subscription, SubscriptionStatus
+from apis.user_api import verify_shopify_request, get_current_user_from_token
 
 security = HTTPBearer(auto_error=False)
 

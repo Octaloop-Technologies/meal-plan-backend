@@ -3,11 +3,11 @@ Onboarding API endpoints (MongoDB)
 """
 from fastapi import APIRouter, HTTPException, Request, Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-from database import User, UserPreference
-from schemas import OnboardingComplete, UserPreferenceResponse, SuccessResponse
-from auth import verify_shopify_request, get_current_user_from_token
+from models.database import User, UserPreference
+from models.schemas import OnboardingComplete, UserPreferenceResponse, SuccessResponse
+from apis.user_api import verify_shopify_request, get_current_user_from_token
 from config import settings
-from user_service import get_or_create_user, save_onboarding_data, get_user_preferences
+from services.user_service import get_or_create_user, save_onboarding_data, get_user_preferences
 from datetime import datetime
 from typing import Optional
 

@@ -4,9 +4,9 @@ Products API - Public endpoints for customers to view and purchase products
 from fastapi import APIRouter, Depends, HTTPException, Request
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from typing import Optional, List, Dict, Any
-from shopify import shopify_client
-from subscription import get_current_user
-from database import User
+from services.shopify_service import shopify_client
+from services.subscription_service import get_current_user
+from models.database import User
 
 security = HTTPBearer(auto_error=False)
 

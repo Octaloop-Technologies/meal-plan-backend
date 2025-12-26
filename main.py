@@ -9,7 +9,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from contextlib import asynccontextmanager
 from config import settings
 from routes import api_router
-from database import init_db
+from models.database import init_db
 import traceback
 import re
 

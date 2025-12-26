@@ -3,8 +3,8 @@ User service - handles user creation and preference management (MongoDB)
 """
 from typing import Optional
 from datetime import datetime
-from database import User, UserPreference, Goal, ActivityLevel
-from schemas import OnboardingComplete
+from models.database import User, UserPreference, Goal, ActivityLevel
+from models.schemas import OnboardingComplete
 import math
 
 

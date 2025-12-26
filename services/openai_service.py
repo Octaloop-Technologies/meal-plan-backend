@@ -2,7 +2,7 @@
 OpenAI service for AI-powered meal suggestions
 """
 from typing import Dict, List, Optional
-from database import UserPreference
+from models.database import UserPreference
 from config import settings
 from openai import OpenAI
 import json

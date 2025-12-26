@@ -3,16 +3,16 @@ API Routes - Consolidated router
 All route modules combined into single router
 """
 from fastapi import APIRouter
-from auth import router as auth_router
-from admin import router as admin_router
-from dashboard import router as dashboard_router
-from meals import router as meals_router
-from onboarding import router as onboarding_router
-from plans import router as plans_router
-from products import router as products_router
-from shopping_list import router as shopping_list_router
-from subscriptions import router as subscriptions_router
-from webhooks import router as webhooks_router
+from apis.user_api import router as auth_router
+from apis.admin_api import router as admin_router
+from apis.dashboard_api import router as dashboard_router
+from apis.meal_api import router as meals_router
+from apis.onboarding_api import router as onboarding_router
+from apis.plan_api import router as plans_router
+from apis.product_api import router as products_router
+from apis.shopping_list_api import router as shopping_list_router
+from apis.subscription_api import router as subscriptions_router
+from apis.webhook_api import router as webhooks_router
 
 api_router = APIRouter()
 

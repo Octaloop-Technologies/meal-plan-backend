@@ -6,11 +6,11 @@ Supports Recharge, Appstle, Loop, and Shopify subscriptions
 from fastapi import APIRouter, Depends, HTTPException, Request
 from typing import Optional
 from datetime import datetime, date
-from database import (
+from models.database import (
     User, Subscription, SubscriptionPlan, SubscriptionStatus, SubscriptionProvider
 )
-from subscription import get_current_user, get_user_subscription
-from shopify import shopify_client
+from services.subscription_service import get_current_user, get_user_subscription
+from services.shopify_service import shopify_client
 import httpx
 from config import settings
 

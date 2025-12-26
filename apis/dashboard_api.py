@@ -4,13 +4,13 @@ Customer Dashboard APIs - Protected by subscription access control
 from fastapi import APIRouter, Depends, HTTPException, Request
 from datetime import date, timedelta
 from typing import Optional, Dict, Any
-from database import (
+from models.database import (
     User, UserPreference, Subscription, SubscriptionStatus, DailyMealPlan, Meal, AIMealSuggestion
 )
-from subscription import require_active_subscription, get_current_user, get_user_subscription
-from meal_engine import generate_daily_plan
-from user_service import get_user_preferences
-from openai_service import generate_meal_suggestions
+from services.subscription_service import require_active_subscription, get_current_user, get_user_subscription
+from services.meal_service import generate_daily_plan
+from services.user_service import get_user_preferences
+from services.openai_service import generate_meal_suggestions
 
 router = APIRouter()
 

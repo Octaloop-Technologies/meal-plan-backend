@@ -11,7 +11,7 @@ from typing import List, Dict, Optional
 from datetime import date
 import os
 from config import settings
-from database import Meal
+from models.database import Meal
 
 
 def generate_meal_plan_pdf(

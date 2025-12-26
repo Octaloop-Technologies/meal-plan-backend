@@ -17,8 +17,8 @@ import httpx
 
 # Import settings and models
 from config import settings
-from database import User
-from schemas import UserRegister, UserLogin, UserResponse, TokenResponse
+from models.database import User
+from models.schemas import UserRegister, UserLogin, UserResponse, TokenResponse
 
 router = APIRouter()
 security = HTTPBearer()

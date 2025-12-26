@@ -5,13 +5,13 @@ from fastapi import APIRouter, Depends, HTTPException, Request
 from fastapi.responses import FileResponse
 from datetime import date, timedelta
 from typing import Optional, List
-from database import (
+from models.database import (
     User, UserPreference, Meal, DailyMealPlan, MealRotationLog, MealType
 )
-from schemas import DailyMealPlanResponse, MealResponse
-from subscription import require_active_subscription, get_current_user
-from meal_engine import generate_daily_plan, generate_weekly_plan
-from meal_plan_pdf import generate_meal_plan_pdf
+from models.schemas import DailyMealPlanResponse, MealResponse
+from services.subscription_service import require_active_subscription, get_current_user
+from services.meal_service import generate_daily_plan, generate_weekly_plan
+from services.meal_plan_pdf import generate_meal_plan_pdf
 from beanie import PydanticObjectId
 import os
 

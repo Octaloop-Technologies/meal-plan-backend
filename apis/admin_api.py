@@ -6,13 +6,13 @@ from typing import List, Optional, Dict, Any
 from beanie import PydanticObjectId
 from beanie.operators import In
 import asyncio
-from database import Meal, MealType, User, Subscription, SubscriptionPlan, UserPreference, AIMealSuggestion
-from schemas import MealCreate, MealUpdate, MealResponse, SuccessResponse
-from auth import verify_admin_api_key
-from shopify import shopify_client
+from models.database import Meal, MealType, User, Subscription, SubscriptionPlan, UserPreference, AIMealSuggestion
+from models.schemas import MealCreate, MealUpdate, MealResponse, SuccessResponse
+from apis.user_api import verify_admin_api_key
+from services.shopify_service import shopify_client
 from config import settings
-from user_service import get_user_preferences
-from openai_service import generate_meal_suggestions
+from services.user_service import get_user_preferences
+from services.openai_service import generate_meal_suggestions
 from datetime import datetime
 
 router = APIRouter()

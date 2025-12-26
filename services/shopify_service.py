@@ -5,7 +5,7 @@ Uses proper OAuth access tokens and required scopes
 import httpx
 from typing import Optional, Dict, Any, List
 from config import settings
-from database import AccessToken
+from models.database import AccessToken
 
 
 class ShopifyClient:

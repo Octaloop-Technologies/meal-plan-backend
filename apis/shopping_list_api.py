@@ -4,15 +4,15 @@ Shopping List API - Protected by subscription access control
 from fastapi import APIRouter, Depends, HTTPException, Request, Response
 from datetime import date, timedelta
 from typing import Optional
-from database import (
+from models.database import (
     User, DailyMealPlan, Meal, ShoppingList
 )
-from subscription import require_active_subscription
-from meal_engine import generate_weekly_plan
-from pdf_service import (
+from services.subscription_service import require_active_subscription
+from services.meal_service import generate_weekly_plan
+from services.pdf_service import (
     aggregate_ingredients, generate_shopping_list_pdf, get_pdf_url
 )
-from user_service import get_user_preferences
+from services.user_service import get_user_preferences
 from config import settings
 import os
 

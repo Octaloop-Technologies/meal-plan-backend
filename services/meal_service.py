@@ -3,7 +3,7 @@ Meal Engine - generates personalized daily meal plans (MongoDB/Beanie version)
 """
 from typing import List, Optional, Dict
 from datetime import date, timedelta
-from database import (
+from models.database import (
     Meal, UserPreference, DailyMealPlan, MealRotationLog, MealType, SubscriptionStatus
 )
 import random
